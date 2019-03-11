@@ -1,0 +1,31 @@
+{
+  "name": "emilys-snippets",
+  "description": "Emily's snippets for clean arch patterns",
+  "displayName": "Emily's Snippets",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emily Curry",
+    "email": "emily@curry.sh",
+    "url": "https://github.com/emily-curry"
+  },
+  "repository": "github:emily-curry/emilys-snippets",
+  "publisher": "emily-curry",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/typescriptreact.json"
+      }
+    ]
+  }
+}

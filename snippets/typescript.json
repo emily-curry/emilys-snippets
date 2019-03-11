@@ -1,0 +1,28 @@
+{
+  "reducer": {
+    "prefix": "tsre",
+    "description": "Generic reducer function",
+    "body": [
+      "import { noop } from '~/Actions';",
+      "",
+      "export interface ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State {}",
+      "",
+      "const initialState: ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State = {};",
+      "",
+      "export const ${TM_FILENAME_BASE/^(.)(.*)$/${1:/downcase}$2/}Reducer = (state: ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State = initialState, action: ${1:Application}Action = noop()): ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State => {",
+      "  switch (action.type) {",
+      "    ",
+      "    default:",
+      "      return state;",
+      "  }",
+      "};"
+    ]
+  },
+  "action-creator": {
+    "prefix": "tsac",
+    "description": "Generic action creator",
+    "body": [
+      "export const ${1:ActionName} = (${2:Params}) => action(${3:ActionType}, ${4:Payload});"
+    ]
+  }
+}
