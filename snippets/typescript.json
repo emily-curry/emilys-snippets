@@ -12,10 +12,34 @@
       "export const ${TM_FILENAME_BASE/^(.)(.*)$/${1:/downcase}$2/}Reducer = (state: ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State = initialState, action: ${1:Application}Action = noop()): ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State => {",
       "  switch (action.type) {",
       "    ",
-      "    default:",
+      "    default: {",
       "      return state;",
+      "    }",
       "  }",
-      "};"
+      "}"
+    ]
+  },
+  "reducer-immer": {
+    "prefix": "tsrei",
+    "description": "Generic reducer function, with immer",
+    "body": [
+      "import produce from 'immer'",
+      "import { noop } from '~/Actions';",
+      "",
+      "export interface ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State {}",
+      "",
+      "const initialState: ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State = {};",
+      "",
+      "export const ${TM_FILENAME_BASE/^(.)(.*)$/${1:/downcase}$2/}Reducer = (state: ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State = initialState, action: ${1:Application}Action = noop()): ${TM_FILENAME_BASE/^(.)(.*)$/${1:/upcase}$2/}State => {",
+      "  return produce(state, draft => {",
+      "    switch (action.type) {",
+      "      ",
+      "      default: {",
+      "        return;",
+      "      }",
+      "    }",
+      "  });",
+      "}"
     ]
   },
   "action-creator": {
