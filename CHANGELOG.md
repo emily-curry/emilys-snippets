@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.3
+
+Reducer snippets don't create new interfaces, state interface is a symbol you can tab to.
+
 ## v0.1.2
 
 Prefer named exports
