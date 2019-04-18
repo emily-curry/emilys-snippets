@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.4
+
+Components (w/ imports) now use filename as the component name.
+
 ## v0.1.3
 
 Reducer snippets don't create new interfaces, state interface is a symbol you can tab to.
