@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.1.4
+## v0.2.1
 
 Components (w/ imports) now use filename as the component name.
 
